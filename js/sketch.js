@@ -4,10 +4,10 @@ let height = 1080;
 const sounds = new Tone.Players
 (
   {
-  dirt: "media/dirt.mp3",
-  oof: "media/minecraft_oof.mp3",
-  scientist: "media/scientist.mp3",
-  BROTHER: "media/THAT_BROTHERS_FLOATING.mp3",
+    dirt: "media/dirt.mp3",
+    oof: "media/minecraft_oof.mp3",
+    scientist: "media/scientist.mp3",
+    BROTHER: "media/THAT_BROTHERS_FLOATING.mp3",
 
   }
 )
@@ -28,8 +28,6 @@ function setup()
   createCanvas(width, height);
   sounds.connect(delay);
   delay.toDestination();
-
-11
 
   slider = createSlider(0., 1., 0.5, 0.05);
   slider.mouseReleased( ()=>
@@ -64,6 +62,8 @@ function draw()
   textSize(75);
   textAlign(CENTER, CENTER);
   text('Press these buttons', (1920 / 2), 70);
+  textSize(30);
+  text("Delay Slider", 85, 1065);
 }
 
 function keyPressed()
